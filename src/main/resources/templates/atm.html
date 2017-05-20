@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>ATMs overview</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" />
+<link rel="stylesheet" th:href="@{/css/main.css}"
+	href="../../css/main.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4>ING ATMs location</h4>
+				</div>
+				<table class="table table-striped table-bordered table-fixed">
+					<thead>
+						<tr>
+							<th>House number</th>
+							<th>City</th>
+							<th>Street</th>
+							<th>Postal code</th>
+							<th>Latitude</th>
+							<th>Longitude</th>
+							<th>Distance</th>
+							<th>Type</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="atm : ${atms}">
+							<td th:text="${atm.address.houseNumber}" />
+							<td th:text="${atm.address.city}" />
+							<td th:text="${atm.address.street}" />
+							<td th:text="${atm.address.postalCode}" />
+							<td th:text="${atm.address.geoLocation.lat}" />
+							<td th:text="${atm.address.geoLocation.lng}" />
+							<td th:text="${atm.distance}" />
+							<td th:text="${atm.type}" />
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript"
+		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
