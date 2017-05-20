@@ -13,11 +13,14 @@ The REST API exposed is located at **http://localhost:8080/atm/api/v1/atms**
 HTTP methods supported by ATM API are:
 
 - **Get all ATMs**
-URI: http://localhost:8080/atm/api/v1/atms
-
+```
+  URI: http://localhost:8080/atm/api/v1/atms
+```
 - **Filter ATMs by criteria**
-For example, to get all ATMs of Beilen city
-URI: http://localhost:8080/atm/api/v1/atms?filter=city::Beilen
+```
+  For example, to get all ATMs of Beilen city
+  URI: http://localhost:8080/atm/api/v1/atms?filter=city::Beilen
+```
 
 ## API Security
 The ATM API uses Basic Authentication as default method. The default values are **user** and **password**.
@@ -45,18 +48,17 @@ Change default user authentication
 ```
 --security.user.name=user=new_user
 ```
-```
 Change default password authentication
 ```
 --security.user.password=new_password
 ```
 
 ## Deployment process
-```
+
 After Maven execution, there will be a new artifact called "atm-1.0.0.war" in folder "/target".
 
 To execute in the WebServer, you must copy this artifact to deployment folder of Tomcat or Wildfly. 
-```
+
 ## Test classes
 
 - AtmApplicationTests
