@@ -31,7 +31,7 @@ public class AtmApplicationTests {
 
     @Before
     public void startUp() {
-        while (atmHolder.getAtmList() == null) {
+        while (atmHolder.getAtmList().size() == 0) {
             try {
                 Thread.sleep(1000);
             } catch (final InterruptedException e) {
