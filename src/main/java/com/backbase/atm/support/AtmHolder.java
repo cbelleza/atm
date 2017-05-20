@@ -1,5 +1,6 @@
 package com.backbase.atm.support;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,10 +18,10 @@ import com.backbase.atm.model.Atm;
 @Component
 public class AtmHolder {
 
-    private List<Atm> atmList;
+    private final List<Atm> atmList = new ArrayList<Atm>();
 
     public void setAtm(@Body final Atm[] atm) {
-        this.atmList = Arrays.asList(atm);
+        atmList.addAll(Arrays.asList(atm));
     }
 
     public List<Atm> getAtmList() {

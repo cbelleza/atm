@@ -32,12 +32,16 @@ public class AtmApplicationTests {
     @Before
     public void startUp() {
         while (atmHolder.getAtmList() == null) {
+            try {
+                Thread.sleep(1000);
+            } catch (final InterruptedException e) {
+            }
         }
     }
 
     @Test
     public void findAllAtms() {
-        Optional<String> criteria = Optional.ofNullable(null);
+        final Optional<String> criteria = Optional.ofNullable(null);
 
         // Call ATM API
         final ResponseEntity<List<Atm>> response = atmApiController.findAll(criteria);
@@ -50,7 +54,7 @@ public class AtmApplicationTests {
 
     @Test
     public void filterAtmsByCity() {
-        Optional<String> criteria = Optional.of("city::Beilen");
+        final Optional<String> criteria = Optional.of("city::Beilen");
 
         // Call ATM API
         final ResponseEntity<List<Atm>> response = atmApiController.findAll(criteria);

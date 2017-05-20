@@ -52,7 +52,8 @@ public class AtmRestController {
     }
 
     private List<Atm> findByFilter(final String filter) {
-        // For future use, we could create new criteria splitting them by | symbol
+        // For future use, we could create new criteria splitting them by |
+        // symbol
         String[] filterPipe = StringUtils.split(filter, "|");
 
         if (filterPipe == null) {

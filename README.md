@@ -12,14 +12,15 @@ The REST API exposed is located at **http://localhost:8080/atm/api/v1/atms**
 
 HTTP methods supported by ATM API are:
 
-- **Get all ATMs**
+- **Find all ATMs**
 ```
-  URI: http://localhost:8080/atm/api/v1/atms
+  For example:
+  http://localhost:8080/atm/api/v1/atms
 ```
-- **Filter ATMs by criteria**
+- **Find ATMs by criteria**
 ```
-  For example, to get all ATMs of Beilen city
-  URI: http://localhost:8080/atm/api/v1/atms?filter=city::Beilen
+  For example, to find all ATMs of Beilen city:
+  http://localhost:8080/atm/api/v1/atms?filter=city::Beilen
 ```
 
 ## API Security
