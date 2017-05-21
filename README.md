@@ -18,7 +18,7 @@ The REST API exposed supports the following HTTP methods:
 
   For example, to find all ATMs from Beilen city: http://localhost:8080/atm/api/v1/atms?filter=city::Beilen
 
-## REST API return codes
+## HTTP status codes
 
 - Success: 200
 - Not found: 404
