@@ -1,10 +1,12 @@
+# ATM Core
+
 ## Synopsis
 
-**ATM** - Expose and receive all ING ATMs.
+The goal of this application is to expose and receive all ATMs from ING bank.
 
 This application is based on Spring Boot framework and generates a WAR file including all dependencies.
 
-There's a public ING RESTful service on the Internet that feeds this application in background, so this URI can be set up manually by the operator.
+There's a public ING RESTful service on the Internet that feeds this application in background, so this URI can be set up manually by the administrator.
 
 To visualize all ATMs you can address the web page **http://localhost:8080/atm/atms**
 
@@ -32,39 +34,46 @@ The default credentials are:
 - login: user
 - password: user
  
-Those values can be replaced by application property. 
+Those values can be replaced by application property too. 
 
-## Build instructions
+## Prerequisites
 
-Install the Maven client (version 3.* or better). Then clone from GIT and then use Maven:
+You need the following installed and available in your $PATH:
+
+    - Java 8 (http://java.oracle.com)
+    - Apache Maven 3.0.4 or greater (http://maven.apache.org/)
+
+## To build from source
+
+Clone remote repository from GitHub and then use Maven:
 ```
 $ git clone ...
 $ mvn clean package
 ```
-## Property configuration in Spring Boot
+## Optional properties in Spring Boot
 
-Define RestFul service using Camel http4 format
+Define external ING ATM RestFul address in Camel http4 format
 ```
---camel.atm-uri=http4://www.ing.nl/api/locator/atms/
+--camel.atm-uri = http4://www.ing.nl/api/locator/atms/
 ```
 The default log level is "info", case needed it can be changed by the property
 ```
---logging.level.com.backbase.atm=<level>
+--logging.level.com.backbase.atm = <level>
 ```
-Change default user authentication
+Change default user name in authentication
 ```
---security.user.name=user=new_user
+--security.user.name=user = new_user
 ```
-Change default password authentication
+Change default password in authentication
 ```
---security.user.password=new_password
+--security.user.password = new_password
 ```
 
-## Deployment process (WAR)
+## Deployment process (WAR file)
 
 After Maven execution, there will be a new artifact called "atm-1.0.0.war" in the folder "/target".
 
-To start the application in a WebServer, you must copy this artifact to a deployment folder even in Tomcat or Wildfly. 
+To start the application in a WebServer, you must copy that artifact to deployment folder in Tomcat or Wildfly. 
 
 ## Test classes
 
