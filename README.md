@@ -4,13 +4,13 @@
 
 This application is based on Spring Boot framework and generates a WAR file including all dependencies.
 
-There's a public ING RESTful service on Internet to feed this application, so this URI can be set up manually by the operator later.
+There's a public ING RESTful service on the Internet that feeds this application in background, so this URI can be set up manually by the operator.
 
 To visualize all ATMs you can address the web page **http://localhost:8080/atm/atms**
 
 The REST API exposed is located at **http://localhost:8080/atm/api/v1/atms**
 
-HTTP methods supported by ATM API are:
+The HTTP methods supported by this REST API are:
 
 - **Find all ATMs**
 ```
@@ -62,9 +62,9 @@ Change default password authentication
 
 ## Deployment process
 
-After Maven execution, there will be a new artifact called "atm-1.0.0.war" in folder "/target".
+After Maven execution, there will be a new artifact called "atm-1.0.0.war" in the folder "/target".
 
-To execute in the WebServer, you must copy this artifact to deployment folder of Tomcat or Wildfly. 
+To start the application in a WebServer, you must copy this artifact to a deployment folder even in Tomcat or Wildfly. 
 
 ## Test classes
 
