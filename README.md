@@ -12,22 +12,18 @@ The REST API exposed supports the following HTTP methods:
 
 - **GET - Find all ATMs**
 
-  [%hardbreaks]
-  For example:  
-  http://localhost:8080/atm/api/v1/atms
+  For example: http://localhost:8080/atm/api/v1/atms
   
 - **GET - Find ATMs by criteria**
 
-  [%hardbreaks]
-  For example, to find all ATMs of Beilen city: 
-  http://localhost:8080/atm/api/v1/atms?filter=city::Beilen
+  For example, to find all ATMs from Beilen city: http://localhost:8080/atm/api/v1/atms?filter=city::Beilen
 
 ## REST API return codes
 
 - Success: 200
 - Not found: 404
 
-## Application Security
+## Application security
 
 The default security mechanism is username / password based making use of HTTP Basic Authentication for the authentication process.
  
@@ -38,7 +34,7 @@ The default credentials are:
  
 Those values can be replaced by application property. 
 
-## Build Instructions
+## Build instructions
 
 Install the Maven client (version 3.* or better). Then clone from GIT and then use Maven:
 ```
