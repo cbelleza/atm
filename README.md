@@ -41,7 +41,7 @@ Install the Maven client (version 3.* or better). Then clone from GIT and then u
 $ git clone ...
 $ mvn clean package
 ```
-## Optional settings for application
+## Property configuration in Spring Boot
 
 Define RestFul service using Camel http4 format
 ```
@@ -60,7 +60,7 @@ Change default password authentication
 --security.user.password=new_password
 ```
 
-## Deployment process
+## Deployment process (WAR)
 
 After Maven execution, there will be a new artifact called "atm-1.0.0.war" in the folder "/target".
 
