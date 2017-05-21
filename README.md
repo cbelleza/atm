@@ -8,19 +8,24 @@ There's a public ING RESTful service on the Internet that feeds this application
 
 To visualize all ATMs you can address the web page **http://localhost:8080/atm/atms**
 
-The REST API exposed is located at **http://localhost:8080/atm/api/v1/atms**
+The REST API exposed supports the following HTTP methods:
 
-The HTTP methods supported by this REST API are:
+- **GET - Find all ATMs**
 
-- **Find all ATMs**
   For example:
+  
   http://localhost:8080/atm/api/v1/atms
-
-- **Find ATMs by criteria**
+  
+- **GET - Find ATMs by criteria**
 
   For example, to find all ATMs of Beilen city:
+  
   http://localhost:8080/atm/api/v1/atms?filter=city::Beilen
 
+## REST API return codes
+
+- Success: 200
+- Not found: 404
 
 ## Application Security
 
