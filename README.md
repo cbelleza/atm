@@ -23,9 +23,15 @@ HTTP methods supported by ATM API are:
   http://localhost:8080/atm/api/v1/atms?filter=city::Beilen
 ```
 
-## API Security
-The ATM API uses Basic Authentication as default method. The default values are **user** and **password**.
+## Application Security
 
+The default security mechanism is username / password based making use of HTTP Basic Authentication for the authentication process.
+ 
+The default credentials are:
+
+- login: user
+- password: user
+ 
 Those values can be replaced by application property. 
 
 ## Build Instructions
