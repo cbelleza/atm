@@ -12,14 +12,12 @@ The REST API exposed supports the following HTTP methods:
 
 - **GET - Find all ATMs**
 
-  For example:
-  
+  For example: +  
   http://localhost:8080/atm/api/v1/atms
   
 - **GET - Find ATMs by criteria**
 
-  For example, to find all ATMs of Beilen city:
-  
+  For example, to find all ATMs of Beilen city: +
   http://localhost:8080/atm/api/v1/atms?filter=city::Beilen
 
 ## REST API return codes
